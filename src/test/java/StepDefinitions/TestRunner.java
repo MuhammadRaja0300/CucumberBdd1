@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
     features= "src/test/java/Features/login.feature",
     glue={"StepDefinitions"},
     //tags= "@regression" ,
-    plugin = {"pretty" , "html:target/cucumber-reports/report.html" , "json:target/cucumber.json"}
+    plugin = {"json:target/cucumber.json"}
     
     
 )

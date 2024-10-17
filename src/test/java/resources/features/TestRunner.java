@@ -1,4 +1,4 @@
-package StepDefinitions;
+package resources.features;
 
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
@@ -6,10 +6,10 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-    features= "src/test/java/Features/login.feature",
-    glue={"StepDefinitions"},
+    features= "src/test/java/resources.features/login.feature",
+    glue={"stepDefinitions"},
     //tags= "@regression" ,
-        plugin = {"pretty", "json:target/CucumberTestReport.json", "html:target/CucumberTestReport.html"}
+        plugin = {"pretty", "json:target/report.json", "html:target/CucumberTestReport.html"}
     
     
 )

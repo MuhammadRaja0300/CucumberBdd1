@@ -6,11 +6,11 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-    features= "src/test/resource/features/login.feature",
+    features= "src/test/java/features",
     glue={"stepDefinitions"},
     //tags= "@regression" ,
         plugin = {"pretty",
-                "json:target/cucumber-reports/cucumber.json" ,
+                "json:target/cucumber.json" ,
                 "html:target/CucumberTestReport.html"}
     
     

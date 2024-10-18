@@ -26,9 +26,9 @@ public class LoginSteps {
 	@Before
 	public void setup() {
 		System.getProperty("webdriver.chrome.driver" , "/Users/muhammad/eclipse-workspace/CucumberTest/drivers/chromedriver");
-		ChromeOptions options = new ChromeOptions();
-		options.addArguments("--headless");
-		driver = new ChromeDriver(options);
+//		ChromeOptions options = new ChromeOptions();
+//		options.addArguments("--headless");
+		driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
 		driver.manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS);
 		driver.manage().window().maximize();

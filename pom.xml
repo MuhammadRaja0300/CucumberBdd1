@@ -67,18 +67,6 @@
 
   <build>
     <plugins>
-      <!-- Maven Surefire Plugin Configuration -->
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-surefire-plugin</artifactId>
-        <version>3.0.0-M7</version>
-        <configuration>
-          <systemPropertyVariables>
-            <cucumber.options>--plugin json:target/cucumber.json</cucumber.options>
-          </systemPropertyVariables>
-        </configuration>
-      </plugin>
-
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>
@@ -87,11 +75,41 @@
           <includes>
             <include>**/RunCucumberTest.java</include>
           </includes>
+          <systemPropertyVariables>
+            <webdriver.chrome.driver>src/test/resources/drivers/chromedriver</webdriver.chrome.driver>
+          </systemPropertyVariables>
         </configuration>
       </plugin>
-
     </plugins>
   </build>
+
+<!--  <build>-->
+<!--    <plugins>-->
+<!--      &lt;!&ndash; Maven Surefire Plugin Configuration &ndash;&gt;-->
+<!--      <plugin>-->
+<!--        <groupId>org.apache.maven.plugins</groupId>-->
+<!--        <artifactId>maven-surefire-plugin</artifactId>-->
+<!--        <version>3.0.0-M7</version>-->
+<!--        <configuration>-->
+<!--          <systemPropertyVariables>-->
+<!--            <cucumber.options>&#45;&#45;plugin json:target/cucumber.json</cucumber.options>-->
+<!--          </systemPropertyVariables>-->
+<!--        </configuration>-->
+<!--      </plugin>-->
+
+<!--      <plugin>-->
+<!--        <groupId>org.apache.maven.plugins</groupId>-->
+<!--        <artifactId>maven-surefire-plugin</artifactId>-->
+<!--        <version>3.0.0-M7</version>-->
+<!--        <configuration>-->
+<!--          <includes>-->
+<!--            <include>**/RunCucumberTest.java</include>-->
+<!--          </includes>-->
+<!--        </configuration>-->
+<!--      </plugin>-->
+
+<!--    </plugins>-->
+<!--  </build>-->
 
 
 </project>

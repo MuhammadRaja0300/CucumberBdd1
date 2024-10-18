@@ -11,6 +11,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.chrome.ChromeOptions;
 import pagefactory.DashboardPage;
 import pagefactory.LoginPage_PF;
 import pagefactory.SignUpPage;
@@ -25,7 +26,9 @@ public class LoginSteps {
 	@Before
 	public void setup() {
 		System.getProperty("webdriver.chrome.driver" , "/Users/muhammad/eclipse-workspace/CucumberTest/drivers/chromedriver");
-		driver = new ChromeDriver();
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("--headless");
+		driver = new ChromeDriver(options);
 		driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
 		driver.manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
